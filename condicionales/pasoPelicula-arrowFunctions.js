@@ -7,7 +7,7 @@ let ageCarlos = 39
 const nameFede = 'Federico'
 let ageFede = 12
 
-function canWatchStarWars8(name, age, isWithAdult) {
+let canWatchStarWars8 = (name, age, isWithAdult) => {
     if (age >= pgStarWars8) {
         alert(`${name} Puede pasar a ver ${starWars8}`)
     } else if (isWithAdult) {
