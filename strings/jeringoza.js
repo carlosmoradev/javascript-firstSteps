@@ -10,3 +10,25 @@
 // ejm: geringoza(abecedario) -- > abece - dario
 
 // 4. Si la palabra original es un palindromo, ninguna regla anterior cuenta y se devuelve la misma palabra intercalando mayusculas y minusculas.
+
+function geringoza(str) {
+    let translation = str
+
+    //Aplicar primer condicion
+
+    if (str.toLowerCase().endsWith('ar')) { //obliga al string a quedar en minuscula y pregunta si termina en "ar"
+        translation = str.slice(0, -2) //La funcion slice() permite cortar caracteres
+    }
+
+    // Aplicar segunda condición
+
+    if (str.toLowerCase().startsWith('z')) { //Consulta si la palabra comienza por "z"
+        translation += 'pe'
+    }
+
+    return translation.toLowerCase()
+}
+
+console.log(geringoza("PARADIGMAR"))
+console.log(geringoza("ZORRO"))
+console.log(geringoza("ZARPAR"))
