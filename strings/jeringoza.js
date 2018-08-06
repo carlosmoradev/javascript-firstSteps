@@ -23,15 +23,13 @@ function jeringoza(str) {
 
         for (let i = 0; i < inverso.length; i++) {
 
-            char = inverso[i]
+            letra = inverso[i]
             if (i % 2) {
-                let charPar = char.toUpperCase
-            } else {
-                let charImpar = char.toLowerCase
+                let letra = letra.toUpperCase()
             }
 
         }
-        return charPar + charImpar
+        return letra
 
     } else {
 
