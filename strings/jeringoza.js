@@ -26,9 +26,19 @@ function geringoza(str) {
         translation += 'pe'
     }
 
+    //Aplicar tercera condicion
+
+    if (translation.length >= 10) {
+        let firstHalf = translation.slice(0, translation.length / 2) //calcula la mitad de letras desde la primera posicion
+        let secondHalf = translation.slice(translation.length / 2) //toma la mitad siguiente del string
+
+        translation = `${firstHalf}-${secondHalf}`
+    }
+
     return translation.toLowerCase()
 }
 
 console.log(geringoza("PARADIGMAR"))
 console.log(geringoza("ZORRO"))
 console.log(geringoza("ZARPAR"))
+console.log(geringoza("ZARRAPASTRORIZACION"))
