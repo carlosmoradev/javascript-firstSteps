@@ -1,38 +1,18 @@
-// function palindromo(palabra) {
-// //Inicio con la cuarta condicion debido a que no aplicaria para ninguna de las otras condiciones.
+function minMay(str) {
+    let inverso = ''
 
-//     //let inverso = (str) => str.split('').reverse().join('')
-//     let inverso = str.split('').reverse().join('')
+    let capitalize = true
 
-//     if (str === inverso) {
+    for (let i = 0; i < inverso.length; i++) {
 
-//         for (let i = 0; i < inverso.length; i++) {
+        let letra = str.charAt(i)
+        inverso += capitalize ? letra.toUpperCase() : letra.toLowerCase()
+        capitalize = !capitalize
 
-//             let letra = inverso[i]
-//             if (i % 2) {
-//                 letra = letra.toUpperCase()
-//             }
+    }
+    return inverso
 
-//         }
-//         return letra
-
-//     }
-
-// function minMay(str) {
-//     // let length = str.length
-//     let translation = ''
-//     let capitalize = true
-
-//     for (let i = 0; i < inverso.length; i++) {
-//         let char = str.charAt(i)
-//         translation += capitalize ? char.toUpperCase() : char.toLowerCase()
-//         capitalize = !capitalize
-//     }
-//     return translation
-// }
-
-
-// }
+}
 
 function jeringoza(str) {
     let translation = str
@@ -41,7 +21,10 @@ function jeringoza(str) {
     if (inverso === translation) {
 
         console.log(`Que curioso: ${translation} es un palíndromo!.`);
-        return inverso.split('')[5];
+        // return inverso.split('');
+
+        return minMay(translation)
+
     } else {
 
         //Aplicar primer condicion
@@ -74,4 +57,4 @@ console.log(jeringoza("PARADIGMAR"))
 console.log(jeringoza("ZORRO"))
 console.log(jeringoza("ZARPAR"))
 console.log(jeringoza("ZARRAPASTRORIZACION"))
-console.log(jeringoza("ZOMETEMOZ"))
+console.log(jeringoza("SOMETEMOS"))
