@@ -1,38 +1,48 @@
+// function palindromo(palabra) {
+// //Inicio con la cuarta condicion debido a que no aplicaria para ninguna de las otras condiciones.
+
+//     //let inverso = (str) => str.split('').reverse().join('')
+//     let inverso = str.split('').reverse().join('')
+
+//     if (str === inverso) {
+
+//         for (let i = 0; i < inverso.length; i++) {
+
+//             let letra = inverso[i]
+//             if (i % 2) {
+//                 letra = letra.toUpperCase()
+//             }
+
+//         }
+//         return letra
+
+//     }
+
+// function minMay(str) {
+//     // let length = str.length
+//     let translation = ''
+//     let capitalize = true
+
+//     for (let i = 0; i < inverso.length; i++) {
+//         let char = str.charAt(i)
+//         translation += capitalize ? char.toUpperCase() : char.toLowerCase()
+//         capitalize = !capitalize
+//     }
+//     return translation
+// }
+
+
+// }
+
 function jeringoza(str) {
     let translation = str
-
-    //Inicio con la cuarta condicion debido a que no aplicaria para ninguna de las otras condiciones.
-
-    //let inverso = (str) => str.split('').reverse().join('')
     let inverso = str.split('').reverse().join('')
 
-    if (str === inverso) {
+    if (inverso === translation) {
 
-        for (let i = 0; i < inverso.length; i++) {
-
-            let letra = inverso[i]
-            if (i % 2) {
-                letra = letra.toUpperCase()
-            }
-
-        }
-        return letra
-
+        console.log(`Que curioso: ${translation} es un palíndromo!.`);
+        return inverso.split('')[5];
     } else {
-
-        // function minMay(str) {
-        //     // let length = str.length
-        //     let translation = ''
-        //     let capitalize = true
-
-        //     for (let i = 0; i < inverso.length; i++) {
-        //         let char = str.charAt(i)
-        //         translation += capitalize ? char.toUpperCase() : char.toLowerCase()
-        //         capitalize = !capitalize
-        //     }
-        //     return translation
-        // }
-
 
         //Aplicar primer condicion
 
@@ -59,8 +69,9 @@ function jeringoza(str) {
     }
 }
 
+
 console.log(jeringoza("PARADIGMAR"))
 console.log(jeringoza("ZORRO"))
 console.log(jeringoza("ZARPAR"))
 console.log(jeringoza("ZARRAPASTRORIZACION"))
-console.log(jeringoza("SOMETEMOS"))
+console.log(jeringoza("ZOMETEMOZ"))
