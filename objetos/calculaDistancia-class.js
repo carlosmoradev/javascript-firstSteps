@@ -1,26 +1,27 @@
-function Punto(x, y) { //este bloque es un constructor
-    this.x = x
-    this.y = y
-        // return this  //el return sobra porque en este caso js lo aplica automaticaente
-}
+class Punto {
+    constructor(x, y) {
+        this.x = x
+        this.y = y
+    }
 
-Punto.prototype.moverEnX = function moverEnX(x) {
-    this.x += x
-}
+    moverEnX(x) {
+        this.x += x
+    }
 
-Punto.prototype.moverEnY = function moverEnY(y) {
-    this.y += y
-}
+    moverEnY(y) {
+        this.y += y
+    }
 
-Punto.prototype.distancia = function distancia(p) {
-    const x = this.x - p.x
-    const y = this.y - p.y
+    distancia(p) {
+        const x = this.x - p.x
+        const y = this.y - p.y
 
-    return Math.sqrt(x * x + y * y)
+        return Math.sqrt(x * x + y * y)
+        return Math.sqrt(x * x + y * y)
+    }
 }
 
 const p1 = new Punto(0, 4) //new crea un nuevo objeto
-
 const p2 = new Punto(3, 0)
 
 
