@@ -1,7 +1,12 @@
-const p1 = {
-    x: 0,
-    y: 4
+function Punto(x, y) {
+
+    this.x = x
+    this.y = y
+
 }
+
+const p1 = new Punto(0, 4) //new crea un nuevo objeto
+
 
 const p2 = {
     x: 3,
