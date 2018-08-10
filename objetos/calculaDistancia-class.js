@@ -16,8 +16,8 @@ class Punto {
         const x = this.x - p.x
         const y = this.y - p.y
 
-        return Math.sqrt(x * x + y * y)
-        return Math.sqrt(x * x + y * y)
+        return Math.sqrt(x * x + y * y).toFixed(2)
+
     }
 }
 
