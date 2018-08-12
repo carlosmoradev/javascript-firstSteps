@@ -1,23 +1,23 @@
 class Toggable {
-    constructor(element) {
-        // Inicializar el estado interno
-        this.element = this.el
-        this.element.innerHTML = 'Off'
+    constructor(el) {
+        // inicializar el estado interno
+        this.el = el
+        this.el.innerHTML = 'Off'
         this.activated = false
-        this.element.addEventListener('click', this.onClick)
-
+        this.onClick = this.onClick.bind(this)
+        this.el.addEventListener('click', this.onClick.bind(this))
     }
-    onClick() {
-        //Cambiar el estado
+
+    onClick(ev) {
         this.activated = !this.activated
-        this.toogleText()
+        this.toggleText()
     }
 
     toggleText() {
-        //Cambiar el texto
-        this.element.innerHTML = this.activated ? 'On' : 'Off'
+        this.el.innerHTML = this.activated ? 'On' : 'Off'
     }
 }
 
 const button = document.getElementById('boton')
-const miBoton = new toggable(buton)
+
+const miBoton = new Toggable(button)
