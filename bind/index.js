@@ -1,9 +1,10 @@
 class Toggable {
     constructor(element) {
         // Inicializar el estado interno
-        this.el = this.el
-        this.el.innerHTML = 'Off'
+        this.element = this.el
+        this.element.innerHTML = 'Off'
         this.activated = false
+        this.element.addEventListener('click', this.onClick)
 
     }
     onClick() {
